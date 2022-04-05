@@ -23,28 +23,20 @@ type Card = {
   narx: string
 }
 
-const newTelefon: Card[] =[]
+let newTelefon: Card[] =[
 
-
-
-
-
-
-
-
-
-
-
+  {url:'X3Pro.jpg', name:'sa',narx:'21'}
+]
 
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('register')
+  res.render('register',{root: './pages'})
 })
 
 
 app.get('/shop', (req , res) => {
-  res.render('shop', { root: './pages' })
+  res.render('shop', { newTelefon: newTelefon })
 })
 
 
